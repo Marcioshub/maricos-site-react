@@ -2,67 +2,91 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
-import Divider from "@material-ui/core/Divider";
 import ListItemText from "@material-ui/core/ListItemText";
 import ListItemAvatar from "@material-ui/core/ListItemAvatar";
 import Avatar from "@material-ui/core/Avatar";
 import Typography from "@material-ui/core/Typography";
+import WorkIcon from "@material-ui/icons/Work";
+import BeachAccessIcon from "@material-ui/icons/BeachAccess";
 
 const useStyles = makeStyles(theme => ({
   root: {
     width: "100%",
-    maxWidth: 400,
     backgroundColor: theme.palette.background.paper
-  },
-  inline: {
-    display: "inline"
   }
 }));
 
-export default function Experience() {
+export default function FolderList() {
   const classes = useStyles();
 
   return (
     <List className={classes.root}>
-      <ListItem alignItems="flex-start">
+      <ListItem>
         <ListItemAvatar>
-          <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+          <Avatar>
+            <WorkIcon />
+          </Avatar>
         </ListItemAvatar>
         <ListItemText
-          primary="Brunch this weekend?"
+          primary="Southern Telecom"
           secondary={
             <React.Fragment>
+              <Typography
+                component="span"
+                variant="body1"
+                className={classes.inline}
+                color="textPrimary"
+              >
+                Quality Assurance, Research and Development
+              </Typography>
+              <br />
               <Typography
                 component="span"
                 variant="body2"
                 className={classes.inline}
                 color="textPrimary"
               >
-                Ali Connors
+                2016 - Present
               </Typography>
-              {" — I'll be in your neighborhood doing errands this…"}
+              <br />
+              {
+                " — Managed the development and execution of web applications and mobile applications. Tested all products within the company."
+              }
             </React.Fragment>
           }
         />
       </ListItem>
-      <Divider variant="inset" component="li" />
-      <ListItem alignItems="flex-start">
+      <ListItem>
         <ListItemAvatar>
-          <Avatar alt="Travis Howard" src="/static/images/avatar/2.jpg" />
+          <Avatar>
+            <WorkIcon />
+          </Avatar>
         </ListItemAvatar>
         <ListItemText
-          primary="Summer BBQ"
+          primary="East New York Family Academy"
           secondary={
             <React.Fragment>
+              <Typography
+                component="span"
+                variant="body1"
+                className={classes.inline}
+                color="textPrimary"
+              >
+                Computer Technician
+              </Typography>
+              <br />
               <Typography
                 component="span"
                 variant="body2"
                 className={classes.inline}
                 color="textPrimary"
               >
-                to Scott, Alex, Jennifer
+                2012 - 2016
               </Typography>
-              {" — Wish I could come, but I'm out of town this…"}
+              <br />
+              {
+                " — I provided solutions in networking, maintenance, programming, and computer system as well as maintaining technology equipment inventory for the entire school."
+              }
             </React.Fragment>
           }
         />

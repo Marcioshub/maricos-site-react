@@ -1,94 +1,71 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import Divider from "@material-ui/core/Divider";
-import ListItemText from "@material-ui/core/ListItemText";
-import ListItemAvatar from "@material-ui/core/ListItemAvatar";
-import Avatar from "@material-ui/core/Avatar";
-import Typography from "@material-ui/core/Typography";
+import Chip from "@material-ui/core/Chip";
+import Paper from "@material-ui/core/Paper";
+import TagFacesIcon from "@material-ui/icons/TagFaces";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    width: "100%",
-    maxWidth: 400,
-    backgroundColor: theme.palette.background.paper
+    display: "flex",
+    justifyContent: "center",
+    flexWrap: "wrap",
+    padding: theme.spacing(0.5)
   },
-  inline: {
-    display: "inline"
+  chip: {
+    margin: theme.spacing(0.5)
   }
 }));
 
 export default function Skills() {
   const classes = useStyles();
+  const [chipData, setChipData] = React.useState([
+    { key: 0, label: "C++" },
+    { key: 1, label: "Java" },
+    { key: 2, label: "Python" },
+    { key: 3, label: "React" },
+    { key: 4, label: "Node" },
+    { key: 5, label: "Express" },
+    { key: 6, label: "HTML5" },
+    { key: 7, label: "CSS" },
+    { key: 8, label: "Javascript" },
+    { key: 9, label: "SQL" },
+    { key: 10, label: "MongoDB" },
+    { key: 11, label: "Firebase" },
+    { key: 12, label: "Android Studio" },
+    { key: 13, label: "Swift" },
+    { key: 14, label: "Flutter" },
+    { key: 15, label: "R" },
+    { key: 16, label: "Git" },
+    { key: 17, label: "AWS" },
+    { key: 18, label: "Robotics" },
+    { key: 19, label: "Machine Learning" },
+    { key: 20, label: "AI" },
+    { key: 21, label: "Arduino" },
+    { key: 22, label: "Raspberry pi" }
+  ]);
+
+  const handleDelete = chipToDelete => () => {
+    setChipData(chips => chips.filter(chip => chip.key !== chipToDelete.key));
+  };
 
   return (
-    <List className={classes.root}>
-      <ListItem alignItems="flex-start">
-        <ListItemAvatar>
-          <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
-        </ListItemAvatar>
-        <ListItemText
-          primary="Brunch this weekend?"
-          secondary={
-            <React.Fragment>
-              <Typography
-                component="span"
-                variant="body2"
-                className={classes.inline}
-                color="textPrimary"
-              >
-                Ali Connors
-              </Typography>
-              {" — I'll be in your neighborhood doing errands this…"}
-            </React.Fragment>
-          }
-        />
-      </ListItem>
-      <Divider variant="inset" component="li" />
-      <ListItem alignItems="flex-start">
-        <ListItemAvatar>
-          <Avatar alt="Travis Howard" src="/static/images/avatar/2.jpg" />
-        </ListItemAvatar>
-        <ListItemText
-          primary="Summer BBQ"
-          secondary={
-            <React.Fragment>
-              <Typography
-                component="span"
-                variant="body2"
-                className={classes.inline}
-                color="textPrimary"
-              >
-                to Scott, Alex, Jennifer
-              </Typography>
-              {" — Wish I could come, but I'm out of town this…"}
-            </React.Fragment>
-          }
-        />
-      </ListItem>
-      <Divider variant="inset" component="li" />
-      <ListItem alignItems="flex-start">
-        <ListItemAvatar>
-          <Avatar alt="Cindy Baker" src="/static/images/avatar/3.jpg" />
-        </ListItemAvatar>
-        <ListItemText
-          primary="Oui Oui"
-          secondary={
-            <React.Fragment>
-              <Typography
-                component="span"
-                variant="body2"
-                className={classes.inline}
-                color="textPrimary"
-              >
-                Sandra Adams
-              </Typography>
-              {" — Do you have Paris recommendations? Have you ever…"}
-            </React.Fragment>
-          }
-        />
-      </ListItem>
-    </List>
+    <Paper className={classes.root}>
+      {chipData.map(data => {
+        let icon;
+
+        if (data.label === "React") {
+          icon = <TagFacesIcon />;
+        }
+
+        return (
+          <Chip
+            key={data.key}
+            icon={icon}
+            label={data.label}
+            className={classes.chip}
+          />
+        );
+      })}
+    </Paper>
   );
 }

@@ -26,7 +26,7 @@ export default function LandingImage() {
         <br />
         <ArrowDropDownCircleIcon
           style={{ fontSize: "4rem" }}
-          onClick={() => window.scrollTo(0, 700)}
+          onClick={() => window.scrollTo(0, 1000)}
         />
       </div>
     </div>

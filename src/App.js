@@ -2,12 +2,12 @@ import React from "react";
 import Navigationbar from "./components/Navigationbar";
 
 import LandingImage from "./components/LandingImage";
-import AboutMe from "./components/AboutMe";
+import AboutMe from "./components/aboutme/AboutMe";
 import Footer from "./components/Footer";
 import Projects from "./components/Projects";
 import ContactMe from "./components/ContactMe";
 import Process from "./components/Process";
-import Experience from "./components/experienceskills/ExperienceSkills";
+import ExperienceSkills from "./components/experienceskills/ExperienceSkills";
 
 function App() {
   return (
@@ -15,9 +15,8 @@ function App() {
       <Navigationbar />
       <LandingImage />
       <AboutMe />
-      <Experience />
+      <ExperienceSkills />
       <Projects />
-      <Process />
       <ContactMe />
       <Footer />
     </div>
