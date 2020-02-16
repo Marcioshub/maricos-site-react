@@ -1,12 +1,10 @@
 import React from "react";
-import Navigationbar from "./components/Navigationbar";
+import Navigationbar from "./components/navigationbar/Navigationbar";
 
-import LandingImage from "./components/LandingImage";
-import AboutMe from "./components/aboutme/AboutMe";
-import Footer from "./components/Footer";
-import Projects from "./components/Projects";
-import ContactMe from "./components/ContactMe";
-import Process from "./components/Process";
+import LandingImage from "./components/landingpage/LandingImage";
+import Footer from "./components/footer/Footer";
+import Projects from "./components/projects/Projects";
+import ContactMe from "./components/contactme/ContactMe";
 import ExperienceSkills from "./components/experienceskills/ExperienceSkills";
 
 function App() {
@@ -14,7 +12,6 @@ function App() {
     <div>
       <Navigationbar />
       <LandingImage />
-      <AboutMe />
       <ExperienceSkills />
       <Projects />
       <ContactMe />

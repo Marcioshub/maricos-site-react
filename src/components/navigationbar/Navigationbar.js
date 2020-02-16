@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     flexGrow: 1,
-    textAlign: "center"
+    textAlign: "left"
   },
   icons: {
     marginLeft: theme.spacing(3),
@@ -29,7 +29,7 @@ export default function ButtonAppBar() {
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
-            Welcome
+            Marcio Castillo
           </Typography>
 
           <a

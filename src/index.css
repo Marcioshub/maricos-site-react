@@ -48,36 +48,18 @@ code {
   transform: translate(-50%, -50%) !important;
 }
 
-.process-container {
-  position: relative !important;
-  text-align: center;
-  width: 100%;
-}
-
-.process-contents {
-  position: absolute !important;
-  top: 50% !important;
-  left: 50% !important;
-  transform: translate(-50%, -50%) !important;
-}
-
 .project-container {
   position: relative !important;
   text-align: center;
   width: 100%;
-  background-color: #393e46;
-  height: 65vh;
 }
 
 .project-contents {
   width: 100%;
-  position: absolute !important;
-  top: 50% !important;
-  left: 50% !important;
-  transform: translate(-50%, -50%) !important;
 }
 
 .contact-me-container {
+  background-color: #00adb5;
   position: relative !important;
   text-align: center;
   width: 100%;
@@ -94,7 +76,7 @@ code {
   height: 75vh !important;
   position: relative !important;
   text-align: center !important;
-  background-color: tomato;
+  background-color: #393e46;
 }
 
 .experience-skills-content {

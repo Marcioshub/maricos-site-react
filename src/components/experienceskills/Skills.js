@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function Skills() {
   const classes = useStyles();
-  const [chipData, setChipData] = React.useState([
+  const [chipData] = React.useState([
     { key: 0, label: "C++" },
     { key: 1, label: "Java" },
     { key: 2, label: "Python" },
@@ -43,10 +43,6 @@ export default function Skills() {
     { key: 21, label: "Arduino" },
     { key: 22, label: "Raspberry pi" }
   ]);
-
-  const handleDelete = chipToDelete => () => {
-    setChipData(chips => chips.filter(chip => chip.key !== chipToDelete.key));
-  };
 
   return (
     <Paper className={classes.root}>
