@@ -7,11 +7,15 @@ import ListItemAvatar from "@material-ui/core/ListItemAvatar";
 import Avatar from "@material-ui/core/Avatar";
 import Typography from "@material-ui/core/Typography";
 import WorkIcon from "@material-ui/icons/Work";
+import Divider from "@material-ui/core/Divider";
 
 const useStyles = makeStyles(theme => ({
   root: {
     width: "100%",
     backgroundColor: theme.palette.background.paper
+  },
+  inline: {
+    display: "inline"
   }
 }));
 
@@ -27,7 +31,7 @@ export default function FolderList() {
           </Avatar>
         </ListItemAvatar>
         <ListItemText
-          primary="Southern Telecom"
+          primary={<Typography component="h6">Southern Telecom</Typography>}
           secondary={
             <React.Fragment>
               <Typography
@@ -55,6 +59,7 @@ export default function FolderList() {
           }
         />
       </ListItem>
+      <Divider variant="inset" component="li" />
       <ListItem>
         <ListItemAvatar>
           <Avatar>
@@ -71,7 +76,7 @@ export default function FolderList() {
                 className={classes.inline}
                 color="textPrimary"
               >
-                Computer Technician
+                System Administrator and Computer Technician
               </Typography>
               <br />
               <Typography
@@ -84,7 +89,7 @@ export default function FolderList() {
               </Typography>
               <br />
               {
-                " — I provided solutions in networking, maintenance, programming, and computer system as well as maintaining technology equipment inventory for the entire school."
+                " — I provided solutions in networking, maintenance, programming, and computer systems as well as maintaining technology equipment inventory for the entire school."
               }
             </React.Fragment>
           }

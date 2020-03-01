@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import cs from "../../images/cs.jpg";
+import cs2 from "../../images/cs2.jpg";
 import Typography from "@material-ui/core/Typography";
 import ArrowDropDownCircleIcon from "@material-ui/icons/ArrowDropDownCircle";
 import AboutMe from "../aboutme/AboutMe";
@@ -9,7 +9,7 @@ export default function LandingImage(props) {
   return (
     <Fragment>
       <div className="landing-img-container">
-        <img src={cs} width="100%" className="landing-img" alt="landing img" />
+        <img src={cs2} width="100%" className="landing-img" alt="landing img" />
 
         <div className="landing-img-center">
           <Typography variant="h2" style={{ fontSize: "4rem" }}>

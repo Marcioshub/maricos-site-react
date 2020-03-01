@@ -7,7 +7,11 @@ import Experience from "./Experience";
 import Skills from "./Skills";
 
 const useStyles = makeStyles(theme => ({
-  root: { flexGrow: 1 },
+  root: {
+    flexGrow: 1,
+    backgroundColor: "#393e46",
+    paddingBottom: 100
+  },
   paper: {
     padding: theme.spacing(2),
     textAlign: "left",
@@ -23,27 +27,23 @@ const useStyles = makeStyles(theme => ({
 export default function ExperienceSkills() {
   const classes = useStyles();
   return (
-    <div className="experience-skills">
-      <div className="experience-skills-content">
-        <div className={classes.root}>
-          <Container fixed>
-            <Grid container spacing={3}>
-              <Grid item xs={12} sm={6}>
-                <Typography variant="h6" className={classes.title}>
-                  MY EXPERIENCE
-                </Typography>
-                <Experience />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <Typography variant="h6" className={classes.title}>
-                  DEVELOPMENT SKILLS
-                </Typography>
-                <Skills />
-              </Grid>
-            </Grid>
-          </Container>
-        </div>
-      </div>
+    <div className={classes.root}>
+      <Container fixed>
+        <Grid container spacing={3}>
+          <Grid item xs={12} sm={6}>
+            <Typography variant="h6" className={classes.title}>
+              MY EXPERIENCE
+            </Typography>
+            <Experience />
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <Typography variant="h6" className={classes.title}>
+              DEVELOPMENT SKILLS
+            </Typography>
+            <Skills />
+          </Grid>
+        </Grid>
+      </Container>
     </div>
   );
 }

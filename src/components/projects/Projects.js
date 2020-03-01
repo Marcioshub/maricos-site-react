@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import GridList from "@material-ui/core/GridList";
 import GridListTile from "@material-ui/core/GridListTile";
@@ -7,13 +7,13 @@ import IconButton from "@material-ui/core/IconButton";
 import Tooltip from "@material-ui/core/Tooltip";
 import Typography from "@material-ui/core/Typography";
 import VisibilityIcon from "@material-ui/icons/Visibility";
+import CodeIcon from "@material-ui/icons/Code";
 
 import beamremotes from "../../images/beamremotes.png";
 import parkinglot from "../../images/parkinglot.png";
 
-import candy1 from "../../images/candy1.jpeg";
-import candy2 from "../../images/candy2.jpeg";
-import candy3 from "../../images/candy3.jpeg";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import Container from "@material-ui/core/Container";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -55,6 +55,7 @@ const tileData = [
     title: "Beam Remotes",
     author: "Marcio",
     website: "https://upbeat-bhaskara-723a27.netlify.com/",
+    github: "",
     hover: "Remote control code finder written in React"
   },
   {
@@ -62,32 +63,41 @@ const tileData = [
     title: "ST Parking Lot",
     author: "Marcio",
     website: "https://st-parkinglot.firebaseapp.com/",
+    github: "",
     hover:
       "Parking lot web app which manages the employee parking lot. Written in React and Firebase"
   },
   {
-    img: candy3,
-    title: "Image",
-    author: "author",
-    featured: true
+    img: beamremotes,
+    title: "",
+    author: "Marcio",
+    website: "https://upbeat-bhaskara-723a27.netlify.com/",
+    github: "",
+    hover: "Remote control code finder written in React"
   },
   {
-    img: candy1,
-    title: "Image",
-    author: "author",
-    featured: true
+    img: beamremotes,
+    title: "Beam Remotes",
+    author: "Marcio",
+    website: "https://upbeat-bhaskara-723a27.netlify.com/",
+    github: "",
+    hover: "Remote control code finder written in React"
   },
   {
-    img: candy2,
-    title: "Image",
-    author: "author",
-    featured: true
+    img: beamremotes,
+    title: "Beam Remotes",
+    author: "Marcio",
+    website: "https://upbeat-bhaskara-723a27.netlify.com/",
+    github: "",
+    hover: "Remote control code finder written in React"
   },
   {
-    img: candy3,
-    title: "Image",
-    author: "author",
-    featured: true
+    img: beamremotes,
+    title: "Beam Remotes",
+    author: "Marcio",
+    website: "https://upbeat-bhaskara-723a27.netlify.com/",
+    github: "",
+    hover: "Remote control code finder written in React"
   }
 ];
 
@@ -95,8 +105,16 @@ export default function SingleLineGridList() {
   const classes = useStyles();
 
   return (
-    <div className="project-container">
-      <div className="project-contents">
+    <div>
+      <Typography
+        variant="h2"
+        gutterBottom
+        style={{ textAlign: "center", marginTop: "5%" }}
+      >
+        Projects
+      </Typography>
+      <CssBaseline />
+      <Container maxWidth="lg">
         <div className={classes.root}>
           <GridList className={classes.gridList} cols={2.5}>
             {tileData.map(tile => (
@@ -109,33 +127,56 @@ export default function SingleLineGridList() {
                     title: classes.title
                   }}
                   actionIcon={
-                    <IconButton aria-label={`star ${tile.title}`}>
-                      <a
-                        href={tile.website}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <HtmlTooltip
-                          title={
-                            <React.Fragment>
-                              <Typography color="inherit">
-                                {tile.title}
-                              </Typography>
-                              {tile.hover}
-                            </React.Fragment>
-                          }
+                    <Fragment>
+                      <IconButton aria-label={`star ${tile.title}`}>
+                        <a
+                          href={tile.website}
+                          target="_blank"
+                          rel="noopener noreferrer"
                         >
-                          <VisibilityIcon className={classes.title} />
-                        </HtmlTooltip>
-                      </a>
-                    </IconButton>
+                          <HtmlTooltip
+                            title={
+                              <React.Fragment>
+                                <Typography color="inherit">
+                                  {tile.title}
+                                </Typography>
+                                {tile.hover}
+                              </React.Fragment>
+                            }
+                          >
+                            <VisibilityIcon className={classes.title} />
+                          </HtmlTooltip>
+                        </a>
+                      </IconButton>
+
+                      <IconButton aria-label={`star ${tile.title}`}>
+                        <a
+                          href={tile.website}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <HtmlTooltip
+                            title={
+                              <React.Fragment>
+                                <Typography color="inherit">
+                                  {tile.title}
+                                </Typography>
+                                {tile.hover}
+                              </React.Fragment>
+                            }
+                          >
+                            <CodeIcon className={classes.title} />
+                          </HtmlTooltip>
+                        </a>
+                      </IconButton>
+                    </Fragment>
                   }
                 />
               </GridListTile>
             ))}
           </GridList>
         </div>
-      </div>
+      </Container>
     </div>
   );
 }
