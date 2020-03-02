@@ -53,7 +53,7 @@ export default function FolderList() {
               </Typography>
               <br />
               {
-                " — Managed the development and execution of web applications and mobile applications. Tested all products within the company."
+                " — Managed the development and execution of web applications, mobile apps, networks, custom client-server applications, hardware, and maintained data systems for security weakness. Oversaw creation of user guides and manuals for our products and applications. Created multiple websites and applications using React, Node, Android Studio, Firebase, MongoDB and Flutter. I regularly perform regression testing to ensure consistent quality of websites and electronic products, as well as keeping track of software versions. I’m also the administrator for all of the Android and iOS applications which are uploaded to the app store. "
               }
             </React.Fragment>
           }
@@ -89,7 +89,7 @@ export default function FolderList() {
               </Typography>
               <br />
               {
-                " — I provided solutions in networking, maintenance, programming, and computer systems as well as maintaining technology equipment inventory for the entire school."
+                " — I provided solutions in networking, maintenance, programming, and computer system as well as maintaining technology equipment inventory for each classroom. I performed routine maintenance and upkeep on servers. I also administrated the Google classroom accounts for the entire school, helping teachers create and renew student learning environments and emails."
               }
             </React.Fragment>
           }

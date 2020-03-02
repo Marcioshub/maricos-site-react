@@ -9,8 +9,12 @@ import Typography from "@material-ui/core/Typography";
 import VisibilityIcon from "@material-ui/icons/Visibility";
 import CodeIcon from "@material-ui/icons/Code";
 
+// images
 import beamremotes from "../../images/beamremotes.png";
-import parkinglot from "../../images/parkinglot.png";
+import parkinglot from "../../images/st-parkinglot.png";
+import chatapp from "../../images/chat-app.png";
+import expensetracker from "../../images/expense-tracker.png";
+import cryptoPriceChecker from "../../images/cryptoPriceChecker.png";
 
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Container from "@material-ui/core/Container";
@@ -68,36 +72,28 @@ const tileData = [
       "Parking lot web app which manages the employee parking lot. Written in React and Firebase"
   },
   {
-    img: beamremotes,
-    title: "",
+    img: chatapp,
+    title: "Chat App",
     author: "Marcio",
-    website: "https://upbeat-bhaskara-723a27.netlify.com/",
-    github: "",
-    hover: "Remote control code finder written in React"
+    website: "https://stoic-thompson-a06fc2.netlify.com/",
+    github: "https://github.com/Marcioshub/sockets-chat-app-client",
+    hover: "Chat app written in React, Nodejs, Express and Sockets"
   },
   {
-    img: beamremotes,
-    title: "Beam Remotes",
+    img: expensetracker,
+    title: "Expense Tracker",
     author: "Marcio",
-    website: "https://upbeat-bhaskara-723a27.netlify.com/",
-    github: "",
-    hover: "Remote control code finder written in React"
+    website: "https://musing-hawking-98dc33.netlify.com/",
+    github: "https://github.com/Marcioshub/Expense-Tracker",
+    hover: "Keep track of your monthly expenses with React"
   },
   {
-    img: beamremotes,
-    title: "Beam Remotes",
+    img: cryptoPriceChecker,
+    title: "Crypto Price Checker",
     author: "Marcio",
-    website: "https://upbeat-bhaskara-723a27.netlify.com/",
-    github: "",
-    hover: "Remote control code finder written in React"
-  },
-  {
-    img: beamremotes,
-    title: "Beam Remotes",
-    author: "Marcio",
-    website: "https://upbeat-bhaskara-723a27.netlify.com/",
-    github: "",
-    hover: "Remote control code finder written in React"
+    website: "https://reverent-fermi-266cc5.netlify.com/",
+    github: "https://github.com/Marcioshub/crypto-price-checker",
+    hover: "Bitcoin, Eth, BitCash and LiteCoin ticker written in React"
   }
 ];
 
@@ -105,7 +101,7 @@ export default function SingleLineGridList() {
   const classes = useStyles();
 
   return (
-    <div>
+    <div style={{ paddingBottom: "5%" }}>
       <Typography
         variant="h2"
         gutterBottom
@@ -114,7 +110,7 @@ export default function SingleLineGridList() {
         Projects
       </Typography>
       <CssBaseline />
-      <Container maxWidth="lg">
+      <Container maxWidth="lg" gutterBottom>
         <div className={classes.root}>
           <GridList className={classes.gridList} cols={2.5}>
             {tileData.map(tile => (
@@ -175,6 +171,7 @@ export default function SingleLineGridList() {
               </GridListTile>
             ))}
           </GridList>
+          <CssBaseline />
         </div>
       </Container>
     </div>
