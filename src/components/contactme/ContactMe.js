@@ -6,6 +6,7 @@ import Typography from "@material-ui/core/Typography";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Container from "@material-ui/core/Container";
 import Zoom from "@material-ui/core/Zoom";
+import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -94,7 +95,13 @@ export default function BasicTextFields() {
                 className={classes.message}
               />
               <br />
-              <div data-netlify-recaptcha="true"></div>
+              <div className="field">
+                <div data-netlify-recaptcha="true"></div>
+              </div>
+              <br />
+              <Button variant="contained" color="primary" type="submit">
+                Submit
+              </Button>
             </form>
           </Paper>
         </Zoom>
