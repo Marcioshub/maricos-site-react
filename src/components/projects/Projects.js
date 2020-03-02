@@ -15,6 +15,7 @@ import parkinglot from "../../images/st-parkinglot.png";
 import chatapp from "../../images/chat-app.png";
 import expensetracker from "../../images/expense-tracker.png";
 import cryptoPriceChecker from "../../images/cryptoPriceChecker.png";
+import blockchain from "../../images/blockchain.png";
 
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Container from "@material-ui/core/Container";
@@ -94,6 +95,15 @@ const tileData = [
     website: "https://reverent-fermi-266cc5.netlify.com/",
     github: "https://github.com/Marcioshub/crypto-price-checker",
     hover: "Bitcoin, Eth, BitCash and LiteCoin ticker written in React"
+  },
+  {
+    img: blockchain,
+    title: "Blockchain",
+    author: "Marcio",
+    website: null,
+    github: "https://github.com/Marcioshub/simple-crypto",
+    hover:
+      "Simple crypto currency implementation built using Nodejs and websockets"
   }
 ];
 
@@ -110,7 +120,7 @@ export default function SingleLineGridList() {
         Projects
       </Typography>
       <CssBaseline />
-      <Container maxWidth="lg" gutterBottom>
+      <Container maxWidth="lg">
         <div className={classes.root}>
           <GridList className={classes.gridList} cols={2.5}>
             {tileData.map(tile => (
@@ -147,7 +157,7 @@ export default function SingleLineGridList() {
 
                       <IconButton aria-label={`star ${tile.title}`}>
                         <a
-                          href={tile.website}
+                          href={tile.github}
                           target="_blank"
                           rel="noopener noreferrer"
                         >
