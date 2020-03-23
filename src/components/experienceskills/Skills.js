@@ -9,7 +9,7 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     justifyContent: "center",
     flexWrap: "wrap",
-    padding: theme.spacing(0.5)
+    padding: theme.spacing(7)
   },
   chip: {
     margin: theme.spacing(0.5)
