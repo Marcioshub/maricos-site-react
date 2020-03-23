@@ -110,11 +110,7 @@ export default function Projects() {
                   <IconButton
                     aria-label={`info about ${tile.title}`}
                     className={classes.icon}
-                    onClick={() =>
-                      window.location.assign(
-                        tile.website !== null ? tile.website : tile.github
-                      )
-                    }
+                    onClick={() => window.location.assign(tile.website)}
                   >
                     <InfoIcon />
                   </IconButton>
