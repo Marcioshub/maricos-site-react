@@ -5,6 +5,7 @@ import GridListTile from "@material-ui/core/GridListTile";
 import GridListTileBar from "@material-ui/core/GridListTileBar";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
+import InfoIcon from "@material-ui/icons/Info";
 
 // images
 import beamremotes from "../../images/beamremotes.png";
@@ -13,9 +14,8 @@ import chatapp from "../../images/chat-app.png";
 import expensetracker from "../../images/expense-tracker.png";
 import cryptoPriceChecker from "../../images/cryptoPriceChecker.png";
 import blockchain from "../../images/blockchain.png";
-
-import ListSubheader from "@material-ui/core/ListSubheader";
-import InfoIcon from "@material-ui/icons/Info";
+import pern from "../../images/pern.png";
+import voteblockchain from "../../images/vote-blockchain.png";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -26,7 +26,7 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: theme.palette.background.paper
   },
   gridList: {
-    width: 600,
+    width: 800,
     height: 450
   },
   icon: {
@@ -84,6 +84,23 @@ const tileData = [
     github: "https://github.com/Marcioshub/simple-crypto",
     hover:
       "Simple crypto currency implementation built using Nodejs and websockets"
+  },
+  {
+    img: pern,
+    title: "Pern Todo List",
+    author: "Marcio",
+    website: "https://sharp-tereshkova-5fc9df.netlify.com/",
+    github: "https://github.com/Marcioshub/pern-todo-client",
+    hover:
+      "Simple CURD TODO LIST app built using the Pern Stack (Progres, Express, React, Nodejs)"
+  },
+  {
+    img: voteblockchain,
+    title: "Voting Blockchain System",
+    author: "Marcio",
+    website: "https://nervous-lamport-bed49c.netlify.com/",
+    github: "https://github.com/Marcioshub/voter-blockchain-client",
+    hover: "Voting Blockchain System built using React, Node, and Express"
   }
 ];
 
@@ -96,10 +113,7 @@ export default function Projects() {
         Projects
       </Typography>
       <div className={classes.root}>
-        <GridList cellHeight={200} className={classes.gridList}>
-          <GridListTile key="Subheader" cols={2} style={{ height: "auto" }}>
-            <ListSubheader component="div">Scroll down</ListSubheader>
-          </GridListTile>
+        <GridList cellHeight={200} cols={4} className={classes.gridList}>
           {tileData.map(tile => (
             <GridListTile key={tile.img}>
               <img src={tile.img} alt={tile.title} />
