@@ -23,7 +23,8 @@ const useStyles = makeStyles(theme => ({
     flexWrap: "wrap",
     justifyContent: "space-around",
     overflow: "hidden",
-    backgroundColor: theme.palette.background.paper
+    backgroundColor: theme.palette.background.paper,
+    marginBottom: 100
   },
   gridList: {
     width: 800,
@@ -109,7 +110,11 @@ export default function Projects() {
 
   return (
     <Fragment>
-      <Typography style={{ textAlign: "center" }} variant="h2" gutterBottom>
+      <Typography
+        style={{ textAlign: "center", marginTop: 100 }}
+        variant="h2"
+        gutterBottom
+      >
         Projects
       </Typography>
       <div className={classes.root}>

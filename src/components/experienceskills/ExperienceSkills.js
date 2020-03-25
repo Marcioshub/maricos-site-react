@@ -19,7 +19,7 @@ const useStyles = makeStyles(theme => ({
     wordWrap: "break-word"
   },
   title: {
-    margin: theme.spacing(4, 0, 2),
+    margin: theme.spacing(10, 0, 2),
     color: "white"
   }
 }));

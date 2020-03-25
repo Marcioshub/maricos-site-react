@@ -13,7 +13,11 @@ import Fade from "@material-ui/core/Fade";
 const useStyles = makeStyles(theme => ({
   paper: {
     display: "relative",
-    textAlign: "center"
+    textAlign: "center",
+    marginTop: 50,
+    marginBottom: 50,
+    padding: 50,
+    backgroundColor: "##00adb5"
   },
   modal: {
     display: "flex",
@@ -73,11 +77,7 @@ export default function BasicTextFields() {
       <CssBaseline />
       <Container maxWidth="md">
         <Zoom in={true} style={{ transitionDelay: true ? "500ms" : "0ms" }}>
-          <Paper
-            elevation={3}
-            className={classes.paper}
-            style={{ padding: 50, backgroundColor: "##00adb5" }}
-          >
+          <Paper elevation={5} className={classes.paper}>
             <Typography variant="h2" gutterBottom>
               CONTACT ME
             </Typography>
